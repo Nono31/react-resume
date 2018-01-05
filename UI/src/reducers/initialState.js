@@ -1,3 +1,8 @@
 export default {
-    resume: { "basics": {} },
+    resume: {
+        "basics": {
+            "location": {},
+            "profiles": []
+        }
+    },
 };
