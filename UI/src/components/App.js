@@ -1,8 +1,8 @@
 /* eslint-disable import/no-named-as-default */
-import React from 'react';
+import React  from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
-import HomePage from './HomePage';
+import ResumePage from './ResumePage';
 import NotFoundPage from './NotFoundPage';
 
 // This is a class-based component because the current
@@ -15,7 +15,7 @@ class App extends React.Component {
       <div>
         <main role="main" className="container">
           <Switch>
-            <Route exact path="/" component={HomePage} />
+            <Route exact path="/" component={ResumePage} />
             <Route component={NotFoundPage} />
           </Switch>
         </main>
