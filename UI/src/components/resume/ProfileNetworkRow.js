@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ProfileNetworkRow = ({ profile }) => {
-    var iconClass;
+    let iconClass;
     switch (profile.network.toLowerCase()) {
         // special cases
         case "google-plus":
