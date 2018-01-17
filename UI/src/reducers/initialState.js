@@ -3,6 +3,7 @@ export default {
         "basics": {
             "location": {},
             "profiles": []
-        }
+        },
+        "work": []
     },
 };

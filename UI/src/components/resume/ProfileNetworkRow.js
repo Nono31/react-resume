@@ -13,6 +13,9 @@ const ProfileNetworkRow = ({ profile }) => {
         case "flicker":
             iconClass = "fa fa-flickr";
             break;
+        case "linkedin":
+            iconClass = "fa fa-linkedin-square";
+            break;
         case "dribbble":
         case "dribble":
             iconClass = "fa fa-dribbble";
@@ -45,18 +48,18 @@ const ProfileNetworkRow = ({ profile }) => {
             iconClass = "fa fa-github";
             break;
         case "twitter":
-            iconClass = "fa fa-twitter fa-fw";
+            iconClass = "fa fa-twitter";
             break;
         case "keybase":
             iconClass = "fa fa-key";
             break;
         default:
             // try to automatically select the icon based on the name
-            iconClass = "fa fa-" + p.network.toLowerCase();
+            iconClass = "fa fa-" + profile.network.toLowerCase();
     }
     return (
         <div className="contact-item">
-            <div className="icon pull-left text-center"><span className={iconClass}></span></div>
+            <div className="icon pull-left text-center"><span className={`${iconClass} fa-fw`}></span></div>
             <div className="title pull-right">{profile.network}</div>
             <div className="description pull-right"><a href={profile.url} target="_blank">{profile.username}</a></div>
         </div>
