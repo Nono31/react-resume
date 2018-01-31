@@ -2,11 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Link } from 'react-router-dom';
 import Basics from './resume/Basics';
 import About from './resume/About';
 import Work from './resume/Work';
-import Contact from './resume/Contact'
+import Awards from './resume/Awards';
+import Volunteer from './resume/Volunteer';
+import Contact from './resume/Contact';
+import Education from './resume/Education';
+import Skills from './resume/Skills';
+import Publication from './resume/Publications';
+import Languages from './resume/Languages';
+import Hobbies from './resume/Hobbies';
+import References from './resume/References';
 import * as resumeActions from './../actions/resumeActions';
 
 class ResumePage extends React.Component {
@@ -27,9 +34,17 @@ class ResumePage extends React.Component {
           <div className="col-12 col-sm-7">
             <About resume={resume} />
             <Work resume={resume} />
+            <Awards resume={resume} />
+            <Volunteer resume={resume} />
           </div>
           <div className="col-12 col-sm-5">
             <Contact resume={resume} />
+            <Education resume={resume} />
+            <Skills resume={resume} />
+            <Publication resume={resume} />
+            <Languages resume={resume} />
+            <Hobbies resume={resume} />
+            <References resume={resume} />
           </div>
         </div>
       </div>
@@ -51,7 +66,7 @@ function changeTitle(resume) {
   }
 }
 
-function mapStateToProps(state, ownProps) {
+function mapStateToProps(state) {
   //Reducers
   return {
     resume: state.resume

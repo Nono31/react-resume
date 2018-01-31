@@ -6,8 +6,8 @@ const Work = ({ resume }) => {
     return (
         <div className="box clearfix">
             <h2><i className="fa fa-suitcase ico"></i>Work Experience</h2>
-            {resume.work.map(w =>
-                <WorkItemRow key={w.company} work={w} />
+            {resume.work.map((w, index) =>
+                <WorkItemRow key={index} work={w} />
             )}
         </div>
     );

@@ -28,13 +28,13 @@ const WorkItemRow = ({ work }) => {
 };
 
 const Highlights = ({ work }) => {
-    return ([<div className="highlights" >Highlights</div>,
-    <ul className="list-group">
-        {work.highlights.map(highlight =>
-            <li className="list-group-item">{highlight}</li>
+    return ([<div key="highlights.hl" className="highlights" >Highlights</div>,
+    <ul key="highlights.ul" className="list-group">
+        {work.highlights.map((highlight, index) =>
+            <li key={index} className="list-group-item">{highlight}</li>
         )}
     </ul>]);
-}
+};
 
 WorkItemRow.propTypes = {
     work: PropTypes.object.isRequired

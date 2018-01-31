@@ -4,14 +4,14 @@ import gravatar from 'gravatar';
 
 const Basics = ({ resume }) => {
   if (resume.basics && resume.basics.email) {
-    var gravatarPicture = gravatar.url(resume.basics.email, {
+    let gravatarPicture = gravatar.url(resume.basics.email, {
       s: '200',
       r: 'pg',
       d: 'mm'
     });
   }
   if (resume.basics.picture || gravatarPicture) {
-    var profilePicture = resume.basics.picture ? resume.basics.picture : gravatarPicture;
+    let profilePicture = resume.basics.picture ? resume.basics.picture : gravatarPicture;
   }
 
   return (

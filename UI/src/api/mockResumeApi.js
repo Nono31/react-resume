@@ -102,7 +102,7 @@ const resume =
 
 class ResumeApi {
   static getResume() {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         resolve(Object.assign({}, resume));
       }, delay);
