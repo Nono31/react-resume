@@ -4,6 +4,14 @@ export default {
             "location": {},
             "profiles": []
         },
-        "work": []
+        "work": [],
+        "volunteer": [],
+        "education": [],
+        "awards": [],
+        "publications": [],
+        "skills": [],
+        "languages": [],
+        "interests": [],
+        "references": [],
     },
 };
