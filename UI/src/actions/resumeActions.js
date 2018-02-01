@@ -6,7 +6,7 @@ export function loadResumeSuccess(resume) {
 }
 
 export function loadResume() {
-return function (dispatch) {
+    return function (dispatch) {
         resumeApi.getResume().then(resume => {
             dispatch(loadResumeSuccess(resume));
         }).catch(error => { throw (error); });

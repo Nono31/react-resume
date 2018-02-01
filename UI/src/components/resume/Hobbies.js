@@ -5,10 +5,19 @@ const Hobbies = ({ resume }) => {
 
     return (
         <div className="box">
-             <h2><i className="fa fa-heart ico"></i> Interests</h2>
-            <ul className="list-group">
-
-            </ul>
+            <h2><i className="fa fa-heart ico"></i> Interests</h2>
+            {resume.interests.map((interest, index) =>
+                <div key={index} className="interests clearfix">
+                    <div className="item-interests">
+                        {interest.name}
+                    </div>
+                    <div className="col-sm-offset-1 col-sm-12 clearfix">
+                        {interest.keywords.map((keyword, index) =>
+                            <span key={index} className="interest badge">{keyword}</span>
+                        )}
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

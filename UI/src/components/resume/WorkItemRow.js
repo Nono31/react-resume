@@ -7,9 +7,9 @@ const WorkItemRow = ({ work }) => {
         <div className="job clearfix">
             <div className="row">
                 <div className="details">
-                    <div className="where">{work.company}</div>
+                    <div className="where">{work.name}</div>
                     <div className="address">
-                        <a href={work.website} target="_blank"><i className="fa fa-globe ico"></i> {work.website}</a>
+                        <a href={work.url} target="_blank"><i className="fa fa-globe ico"></i> {work.url}</a>
                     </div>
                     <div className="year">December 2013 – December 2014</div>
                 </div>
