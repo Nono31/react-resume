@@ -15,7 +15,7 @@ const WorkItemRow = ({ work }) => {
                 </div>
             </div>
             <div className="row">
-                <div className="job-details col-xs-11">
+                <div className="job-details col-sm-11">
                     <div className="profession">{work.position}</div>
                     <div className="description">
                         {work.summary}

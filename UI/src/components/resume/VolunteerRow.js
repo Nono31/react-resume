@@ -15,7 +15,7 @@ const VolunteerRow = ({ volunteer }) => {
                 </div>
             </div>
             <div className="row">
-                <div className="col-xs-11 pull-right">
+                <div className="col-sm-11 float-right">
                     <div className="profession">{volunteer.position}</div>
                     <div className="description">
                         {volunteer.summary}

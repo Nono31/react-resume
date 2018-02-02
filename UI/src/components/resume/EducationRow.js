@@ -5,8 +5,8 @@ const EducationRow = ({ education }) => {
 
     return (
         <li>
-            <div className="year pull-left">{education.startDate} {education.endDate}</div>
-            <div className="description pull-right">
+            <div className="year float-left">{education.startDate} {education.endDate}</div>
+            <div className="description float-right">
                 <h3>{education.institution}</h3>
                 <p><i className="fa fa-graduation-cap ico"></i> {education.studyType}</p>
                 <p>{education.area}</p>

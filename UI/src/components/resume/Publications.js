@@ -7,11 +7,11 @@ const Publications = ({ resume }) => {
         <div className="box">
             <h2><i className="fa fa-book ico"></i> Publications</h2>
             {resume.publications.map((publication, index) =>
-                <div key={index} className="publication panel panel-default">
-                    <div className="panel-heading">
-                        <div className="name panel-title">{publication.name}</div>
+                <div key={index} className="publication card">
+                    <div className="card-header">
+                        <div className="name card-title">{publication.name}</div>
                     </div>
-                    <div className="panel-body">
+                    <div className="card-block">
                         <div className="publisher"><i className="fa fa-bookmark ico"></i> {publication.publisher}</div>
                         <div className="year">{publication.releaseDate}</div>
                         <div className="address">

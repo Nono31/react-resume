@@ -8,7 +8,7 @@ const Languages = ({ resume }) => {
             <h2><i className="fa fa-language ico"></i> Languages</h2>
             <ul className="list-group">
                 {resume.languages.map((language, index) =>
-                    <li key={index} className=" list-group-item">{language.language}<span className="skill badge pull-right">{language.fluency}</span></li>
+                    <li key={index} className=" list-group-item">{language.language}<span className="skill badge float-right">{language.fluency}</span></li>
                 )}
             </ul>
         </div>

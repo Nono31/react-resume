@@ -15,7 +15,7 @@ const Basics = ({ resume }) => {
   }
 
   return (
-      <div className="col-sm-12">
+      <div className="col-md-12">
         <div id="photo-header" className="text-center">
           <div id="photo">
             <img src={profilePicture} alt="avatar" />

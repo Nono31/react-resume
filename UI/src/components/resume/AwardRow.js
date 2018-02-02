@@ -5,8 +5,8 @@ const AwardRow = ({ award }) => {
 
   return (
     <li>
-      <div className="year pull-left">{award.date}</div>
-      <div className="description pull-right">
+      <div className="year float-left">{award.date}</div>
+      <div className="description float-right">
         <h3>{award.awarder}</h3>
         <p><i className="fa fa-trophy ico"></i> {award.title}</p>
         <p>{award.summary}</p>
