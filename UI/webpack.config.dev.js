@@ -102,7 +102,7 @@ export default {
         ]
       },
       {
-        test: /(\.css|\.scss|\.sass|\.less)$/,
+        test: /(\.css|\.scss|\.sass)$/,
         use: [
           'style-loader',
           {
@@ -117,12 +117,6 @@ export default {
                 require('precss'),
                 require('autoprefixer')
               ],
-              sourceMap: true
-            }
-          },{
-            loader: 'less-loader',
-            options: {
-              includePaths: [path.resolve(__dirname, 'src', 'less')],
               sourceMap: true
             }
           }, {

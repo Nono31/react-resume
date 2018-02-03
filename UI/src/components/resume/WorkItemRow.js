@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { getFormattedDateTime } from '../../utils/dates';
 
 const WorkItemRow = ({ work }) => {
     return (
@@ -11,7 +11,7 @@ const WorkItemRow = ({ work }) => {
                     <div className="address">
                         <a href={work.url} target="_blank"><i className="fa fa-globe ico"></i> {work.url}</a>
                     </div>
-                    <div className="year">December 2013 – December 2014</div>
+                    <div className="year">{getFormattedDateTime(work.startDate)} – {getFormattedDateTime(work.endDate)}</div>
                 </div>
             </div>
             <div className="row">

@@ -11,7 +11,7 @@ const Hobbies = ({ resume }) => {
                     <div className="item-interests">
                         {interest.name}
                     </div>
-                    <div className="col-md-offset-1 col-md-12 clearfix">
+                    <div className="col-md-12 offset-md-1 clearfix">
                         {interest.keywords.map((keyword, index) =>
                             <span key={index} className="interest badge">{keyword}</span>
                         )}

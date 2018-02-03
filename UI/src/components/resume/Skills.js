@@ -12,7 +12,7 @@ const Skills = ({ resume }) => {
                         {skill.name}
                         <span className="skill-level">{skill.level}</span>
                     </div>
-                    <div className="col-md-offset-1 col-md-12 clearfix">
+                    <div className="col-md-12 offset-md-1 clearfix">
                         {skill.keywords.map((keyword, index) =>
                             <span key={index} className="skill badge">{keyword}</span>
                         )}

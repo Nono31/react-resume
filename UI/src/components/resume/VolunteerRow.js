@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { getFormattedDateTime } from '../../utils/dates';
 
 const VolunteerRow = ({ volunteer }) => {
 
@@ -11,11 +12,11 @@ const VolunteerRow = ({ volunteer }) => {
                     <div className="address">
                         <a href={volunteer.url} target="_blank"><i className="fa fa-globe ico"></i> {volunteer.url}</a>
                     </div>
-                    <div className="year">{volunteer.startDate} – {volunteer.endDate}</div>
+                    <div className="year">{getFormattedDateTime(volunteer.startDate)} – {getFormattedDateTime(volunteer.endDate)}</div>
                 </div>
             </div>
-            <div className="row">
-                <div className="col-sm-11 float-right">
+            <div className="row justify-content-end">
+                <div className="col-sm-11">
                     <div className="profession">{volunteer.position}</div>
                     <div className="description">
                         {volunteer.summary}

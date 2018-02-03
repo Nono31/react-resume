@@ -5,7 +5,7 @@ import WorkItemRow from './WorkItemRow';
 const Work = ({ resume }) => {
     return (
         <div className="box clearfix">
-            <h2><i className="fa fa-suitcase ico"></i>Work Experience</h2>
+            <h2><i className="fa fa-suitcase ico"></i> Work Experience</h2>
             {resume.work.map((w, index) =>
                 <WorkItemRow key={index} work={w} />
             )}

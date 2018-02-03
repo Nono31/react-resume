@@ -7,9 +7,9 @@ const References = ({ resume }) => {
         <div className="box">
             <h2><i className="fa fa-check-square ico"></i> References</h2>
             {resume.references.map((reference, index) =>
-                <blockquote key={index}>
-                    <div>{reference.reference}</div>
-                    <footer>
+                <blockquote key={index} className="blockquote">
+                    <p>{reference.reference}</p>
+                    <footer className="blockquote-footer">
                         <a href="#" target="_blank">{reference.name}</a>
                     </footer>
                 </blockquote>
