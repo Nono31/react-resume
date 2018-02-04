@@ -11,7 +11,7 @@ const WorkItemRow = ({ work }) => {
                     <div className="address">
                         <a href={work.url} target="_blank"><i className="fa fa-globe ico"></i> {work.url}</a>
                     </div>
-                    <div className="year">{getFormattedDateTime(work.startDate)} – {getFormattedDateTime(work.endDate)}</div>
+                    <div className="year">{getFormattedDateTime(work.startDate)} – {work.endDate ? getFormattedDateTime(work.endDate) : 'Present'}</div>
                 </div>
             </div>
             <div className="row">
@@ -19,7 +19,7 @@ const WorkItemRow = ({ work }) => {
                     <div className="profession">{work.position}</div>
                     <div className="description">
                         {work.summary}
-                        {work.highlights.length > 0 && <Highlights work={work} />}
+                        <Highlights work={work} />
                     </div>
                 </div>
             </div>
@@ -28,12 +28,15 @@ const WorkItemRow = ({ work }) => {
 };
 
 const Highlights = ({ work }) => {
-    return ([<div key="highlights.hl" className="highlights" >Highlights</div>,
-    <ul key="highlights.ul" className="list-group">
-        {work.highlights.map((highlight, index) =>
-            <li key={index} className="list-group-item">{highlight}</li>
-        )}
-    </ul>]);
+    if (work.highlights && work.highlights.length > 0) {
+        return ([<div key="highlights.hl" className="highlights" >Highlights</div>,
+        <ul key="highlights.ul" className="list-group">
+            {work.highlights.map((highlight, index) =>
+                <li key={index} className="list-group-item">{highlight}</li>
+            )}
+        </ul>]);
+    }
+    else return null;
 };
 
 WorkItemRow.propTypes = {
