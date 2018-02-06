@@ -29,7 +29,7 @@
   "author": "Arnaud Druffin",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "4.0.0-beta.2",
+    "bootstrap": "4.0.0",
     "font-awesome": "4.7.0",
     "gravatar": "1.6.0",
     "jquery": "3.2.1",
