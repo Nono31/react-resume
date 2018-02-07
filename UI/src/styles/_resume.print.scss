@@ -1,0 +1,111 @@
+@media print {
+    body {
+        font-size: 0.85rem;
+        -webkit-print-color-adjust: exact;
+    }
+    a[href] {
+        &:after {
+            content: none !important;
+        }
+    }
+    #photo {
+        display: none;
+    }
+    .box {
+        margin-bottom: -10px;
+    }
+    blockquote {
+        page-break-inside: avoid;
+    }
+    #education {
+        page-break-inside: avoid;
+        margin: 0;
+        margin-bottom: -20px;
+        &:before {
+            background: none;
+        }
+        .description {
+            border: 1px solid #eee;
+        }
+    }
+    #awards {
+        page-break-inside: avoid;
+        &:before {
+            background: none;
+        }
+        .description {
+            border: 1px solid #eee;
+        }
+    }
+    .contact-item {
+        page-break-inside: avoid;
+    }
+    .publication {
+        page-break-inside: avoid;
+        margin: 0;
+        padding: 0 5px;
+        border: none;
+        .panel-heading {
+            margin: 0;
+            padding: 0 5px;
+            border: none;
+        }
+        .name {
+            margin: 0;
+            padding: 0 5px;
+            border: none;
+        }
+        .panel-body {
+            padding: 0 10px;
+            margin: 0;
+        }
+    }
+    .skills {
+        page-break-inside: avoid;
+        .col-sm-offset-1 {
+            margin-top: -10px;
+            margin-bottom: 5px;
+        }
+    }
+    .interests {
+        page-break-inside: avoid;
+        .col-sm-offset-1 {
+            margin-top: -10px;
+            margin-bottom: 5px;
+        }
+    }
+    .col-sm-5 {
+        width: 40%;
+        padding: 0 15px;
+    }
+    .col-sm-7 {
+        width: 60%;
+        padding: 0 15px;
+    }
+    .job {
+        .details {
+            border: 1px solid #eee;
+        }
+    }
+    .badge {
+        margin: 0;
+    }
+    .list-group-item {
+        border: none;
+        margin: 0;
+        padding: 5px 15px;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            right: 0;
+            left: -1px;
+            height: 0;
+            width: 0;
+            border: solid transparent;
+            border-right-color: #999;
+            border-width: 4px;
+            pointer-events: none;
+        }
+    }
+}
