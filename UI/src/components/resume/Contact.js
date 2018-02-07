@@ -3,35 +3,62 @@ import PropTypes from 'prop-types';
 import ProfileNetworkRow from './ProfileNetworkRow';
 
 const Contact = ({ resume }) => {
-    return (
-        <div className="box clearfix">
-            <h2><i className="fa fa-bullseye ico" /> Contact</h2>
-            <div className="contact-item">
-                <div className="icon float-left text-center"><span className="fa fa-map-marker fa-fw" /></div>
-                <div className="title float-right">{resume.basics.location.address}</div>
-                <div className="title  float-right">{resume.basics.location.city}, {resume.basics.location.region} {resume.basics.location.postalCode} {resume.basics.location.countryCode}</div>
-            </div>
-            <div className="contact-item">
-                <div className="icon float-left text-center"><span className="fa fa-phone fa-fw"></span></div>
-                <div className="title only float-right">{resume.basics.phone}</div>
-            </div>
-            <div className="contact-item">
-                <div className="icon float-left text-center"><span className="fa fa-envelope fa-fw"></span></div>
-                <div className="title only float-right"><a href="mailto:{resume.basics.email}" target="_blank">{resume.basics.email}</a></div>
-            </div>
-            <div className="contact-item">
-                <div className="icon float-left text-center"><span className="fa fa-globe fa-fw"></span></div>
-                <div className="title only float-right"><a href={resume.basics.url} target="_blank">{resume.basics.url}</a></div>
-            </div>
-            {resume.basics.profiles.map(p =>
-                <ProfileNetworkRow key={p.network} profile={p} />
-            )}
+  let containAddress = resume.basics.location && (resume.basics.location.city || resume.basics.location.region || resume.basics.location.postalCode || resume.basics.location.countryCode);
+  let containAddressLine2 = [];
+  if (resume.basics.location.city) {
+    if (resume.basics.location.region || resume.basics.location.postalCode || resume.basics.location.countryCode) {
+      containAddressLine2.push(`${resume.basics.location.city},`);
+    }
+    else {
+      containAddressLine2.push(resume.basics.location.city);
+    }
+  }
+
+  if (resume.basics.location.region) { containAddressLine2.push(resume.basics.location.region); }
+  if (resume.basics.location.postalCode) { containAddressLine2.push(resume.basics.location.postalCode); }
+  if (resume.basics.location.countryCode) { containAddressLine2.push(resume.basics.location.countryCode); }
+
+  return (
+    <div className="box clearfix">
+      <h2><i className="fa fa-bullseye ico" /> Contact</h2>
+      {containAddress &&
+        <div className="contact-item">
+          <div className="icon float-left text-center"><span className="fa fa-map-marker fa-fw" /></div>
+          {resume.basics.location.address &&
+            <div className="title float-right">{resume.basics.location.address}</div>
+          }
+          {containAddressLine2.length > 0 &&
+            <div className="title  float-right">{containAddressLine2.join(" ")}</div>
+          }
         </div>
-    );
+      }
+      {resume.basics.phone &&
+        <div className="contact-item">
+          <div className="icon float-left text-center"><span className="fa fa-phone fa-fw"></span></div>
+          <div className="title only float-right">{resume.basics.phone}</div>
+        </div>
+      }
+      {resume.basics.email &&
+        <div className="contact-item">
+          <div className="icon float-left text-center"><span className="fa fa-envelope fa-fw"></span></div>
+          <div className="title only float-right"><a href={`mailto:${resume.basics.email}`} target="_blank">{resume.basics.email}</a></div>
+        </div>
+      }
+      {resume.basics.url &&
+        <div className="contact-item">
+          <div className="icon float-left text-center"><span className="fa fa-globe fa-fw"></span></div>
+          <div className="title only float-right"><a href={resume.basics.url} target="_blank">{resume.basics.url}</a></div>
+        </div>
+      }
+      {resume.basics.profiles.map(p =>
+        <ProfileNetworkRow key={p.network} profile={p} />
+      )}
+    </div>
+  );
 };
 
 Contact.propTypes = {
-    resume: PropTypes.object.isRequired
+  resume: PropTypes.object.isRequired
 };
 
 export default Contact;

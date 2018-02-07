@@ -31,13 +31,13 @@ class ResumePage extends React.Component {
           <Basics resume={resume} />
         </div>
         <div className="row">
-          <div className="col-12 col-md-7">
+          <div className="col-12 col-md-6 col-lg-7">
             <About resume={resume} />
             <Work resume={resume} />
             <Awards resume={resume} />
             <Volunteer resume={resume} />
           </div>
-          <div className="col-12 col-md-5">
+          <div className="col-12 col-md-6 col-lg-5">
             <Contact resume={resume} />
             <Education resume={resume} />
             <Skills resume={resume} />
