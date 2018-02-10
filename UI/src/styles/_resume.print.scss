@@ -1,9 +1,12 @@
 @media print {
     body {
+        color: #000;
+background: #fff;
         font-size: 0.85rem;
         -webkit-print-color-adjust: exact;
     }
     a[href] {
+        color: #000;
         &:after {
             content: none !important;
         }
@@ -12,7 +15,16 @@
         display: none;
     }
     .box {
-        margin-bottom: -10px;
+        margin-bottom: 0px;
+        h2{
+            color: #000;
+        }
+        .skill, .badge, .skill-level
+        {
+            color: #000;
+            background: #fff;
+            border: 1px solid #eee;
+        }
     }
     blockquote {
         page-break-inside: avoid;
@@ -39,7 +51,11 @@
     }
     .contact-item {
         page-break-inside: avoid;
+        .icon{
+            background: #fff;
+        }
     }
+
     .publication {
         page-break-inside: avoid;
         margin: 0;
