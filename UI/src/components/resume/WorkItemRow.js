@@ -8,6 +8,9 @@ const WorkItemRow = ({ work }) => {
       <div className="row">
         <div className="details">
           <div className="where">{work.name}</div>
+          {work.description &&
+            <div className="intro">{work.description}</div>
+          }
           {work.url &&
             <div className="address">
               <a href={work.url} target="_blank"><i className="fa fa-globe ico"></i> {work.url}</a>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import gravatar from 'gravatar';
 
 const Basics = ({ resume }) => {
-  if (resume.basics && (resume.basics.email || (!resume.basics.picture && !resume.basics.email))) {
+  if (resume.basics && (resume.basics.email || (!resume.basics.image && !resume.basics.email))) {
     var gravatarPicture = gravatar.url(resume.basics.email, {
       s: '200',
       r: 'pg',
@@ -11,8 +11,8 @@ const Basics = ({ resume }) => {
       f: 'y'
     });
   }
-  if (resume.basics.picture || gravatarPicture) {
-    var profilePicture = resume.basics.picture ? resume.basics.picture : gravatarPicture;
+  if (resume.basics.image || gravatarPicture) {
+    var profilePicture = resume.basics.image ? resume.basics.image : gravatarPicture;
   }
 
   return (
