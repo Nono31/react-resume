@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { getFormattedDateTime } from '../../utils/dates';
+import { buildGoogleMapsLink } from '../../utils/link';
 
 const WorkItemRow = ({ work }) => {
   return (
@@ -8,6 +9,11 @@ const WorkItemRow = ({ work }) => {
       <div className="row">
         <div className="details">
           <div className="where">{work.name}</div>
+          {work.location &&
+            <div className="location">
+              <a href={buildGoogleMapsLink(work.location)} target="_blank"><i className="fa fa-map-marker ico"></i> {work.location}</a>
+            </div>
+          }
           {work.description &&
             <div className="intro">{work.description}</div>
           }
