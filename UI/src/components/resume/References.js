@@ -10,7 +10,7 @@ const References = ({ resume }) => {
                     <blockquote key={index} className="blockquote">
                         <p>{reference.reference}</p>
                         <footer className="blockquote-footer">
-                            <a href="#" target="_blank">{reference.name}</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer">{reference.name}</a>
                         </footer>
                     </blockquote>
                 )}

@@ -11,7 +11,7 @@ const WorkItemRow = ({ work }) => {
           <div className="where">{work.name}</div>
           {work.location &&
             <div className="location">
-              <a href={buildGoogleMapsLink(work.location)} target="_blank"><i className="fa fa-map-marker ico"></i> {work.location}</a>
+              <a href={buildGoogleMapsLink(work.location)} target="_blank" rel="noopener noreferrer"><i className="fa fa-map-marker ico"></i> {work.location}</a>
             </div>
           }
           {work.description &&
@@ -19,7 +19,7 @@ const WorkItemRow = ({ work }) => {
           }
           {work.url &&
             <div className="address">
-              <a href={work.url} target="_blank"><i className="fa fa-globe ico"></i> {work.url}</a>
+              <a href={work.url} target="_blank" rel="noopener noreferrer"><i className="fa fa-globe ico"></i> {work.url}</a>
             </div>
           }
           <div className="year">{getFormattedDateTime(work.startDate)} – {work.endDate ? getFormattedDateTime(work.endDate) : 'Present'}</div>

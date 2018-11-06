@@ -17,7 +17,7 @@ const Publications = ({ resume }) => {
                             <div className="publisher"><i className="fa fa-bookmark ico"></i> {publication.publisher}</div>
                             <div className="year">{getFormattedDateTime(publication.releaseDate, dateFormat)}</div>
                             <div className="address">
-                                <a href={publication.url} target="_blank"><i className="fa fa-globe ico"></i> {publication.url}</a>
+                                <a href={publication.url} target="_blank" rel="noopener noreferrer"><i className="fa fa-globe ico"></i> {publication.url}</a>
                             </div>
                             <p>{publication.summary}</p>
                         </div>

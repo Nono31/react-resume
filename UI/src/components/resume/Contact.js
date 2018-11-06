@@ -26,7 +26,7 @@ const Contact = ({ resume }) => {
       <h2><i className="fa fa-bullseye ico" /> Contact</h2>
       {containAddress &&
         <div className="contact-item">
-          <a href={buildGoogleMapsLink(locationStr)} target="_blank">
+          <a href={buildGoogleMapsLink(locationStr)} target="_blank" rel="noopener noreferrer">
             <div className="icon float-left text-center"><span className="fa fa-map-marker fa-fw" /></div>
             {resume.basics.location.address &&
               <div className="title float-right">{resume.basics.location.address}</div>
@@ -46,13 +46,13 @@ const Contact = ({ resume }) => {
       {resume.basics.email &&
         <div className="contact-item">
           <div className="icon float-left text-center"><span className="fa fa-envelope fa-fw"></span></div>
-          <div className="title only float-right"><a href={`mailto:${resume.basics.email}`} target="_blank">{resume.basics.email}</a></div>
+          <div className="title only float-right"><a href={`mailto:${resume.basics.email}`} target="_blank" rel="noopener noreferrer">{resume.basics.email}</a></div>
         </div>
       }
       {resume.basics.url &&
         <div className="contact-item">
           <div className="icon float-left text-center"><span className="fa fa-globe fa-fw"></span></div>
-          <div className="title only float-right"><a href={resume.basics.url} target="_blank">{resume.basics.url}</a></div>
+          <div className="title only float-right"><a href={resume.basics.url} target="_blank" rel="noopener noreferrer">{resume.basics.url}</a></div>
         </div>
       }
       {resume.basics.profiles.map(p =>

@@ -16,7 +16,7 @@ import Hobbies from './resume/Hobbies';
 import References from './resume/References';
 import * as resumeActions from './../actions/resumeActions';
 
-class ResumePage extends React.Component {
+export class ResumePage extends React.Component {
   constructor(props, context) {
     super(props, context);
   }

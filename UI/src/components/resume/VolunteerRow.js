@@ -10,7 +10,7 @@ const VolunteerRow = ({ volunteer }) => {
                 <div className="details">
                     <div className="where">{volunteer.organization}</div>
                     <div className="address">
-                        <a href={volunteer.url} target="_blank"><i className="fa fa-globe ico"></i> {volunteer.url}</a>
+                        <a href={volunteer.url} target="_blank" rel="noopener noreferrer"><i className="fa fa-globe ico"></i> {volunteer.url}</a>
                     </div>
                     <div className="year">{getFormattedDateTime(volunteer.startDate)} – {volunteer.endDate ? getFormattedDateTime(volunteer.endDate) : 'Present'}</div>
                 </div>

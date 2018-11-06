@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ResumePage /> should match snapshot 1`] = `
+<div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-md-12"
+    >
+      <div
+        className="text-center"
+        id="photo-header"
+      >
+        <div
+          id="photo"
+        >
+          <img
+            alt="avatar"
+            src="//www.gravatar.com/avatar/d415f0e30c471dfdd9bc4f827329ef48?s=200&r=pg&d=mm&f=y"
+          />
+        </div>
+        <div
+          id="text-header"
+        >
+          <h1>
+            <br />
+            <span />
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-12 col-md-6 col-lg-7"
+    >
+      <div
+        className="box"
+      >
+        <h2>
+          <i
+            className="fa fa-user ico"
+          />
+           About
+        </h2>
+        <p />
+      </div>
+    </div>
+    <div
+      className="col-12 col-md-6 col-lg-5"
+    >
+      <div
+        className="box clearfix"
+      >
+        <h2>
+          <i
+            className="fa fa-bullseye ico"
+          />
+           Contact
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+`;

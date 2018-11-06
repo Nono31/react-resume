@@ -61,7 +61,7 @@ const ProfileNetworkRow = ({ profile }) => {
         <div className="contact-item">
             <div className="icon float-left text-center"><span className={`${iconClass} fa-fw`}></span></div>
             <div className="title float-right">{profile.network}</div>
-            <div className="description float-right"><a href={profile.url} target="_blank">{profile.username}</a></div>
+            <div className="description float-right"><a href={profile.url} target="_blank" rel="noopener noreferrer">{profile.username}</a></div>
         </div>
     );
 };
