@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Namespace
+metadata:
+  name: react-resume
+  labels:
+    name: react-resume
+---
+kind: Deployment
+metadata:
+  name: react-resume-deployment
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: react-resume
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: react-resume
+    spec:
+      containers:
+      - name: react-resume
+        image: react-resume:latest
+        ports:
+        - containerPort: 80

@@ -1,0 +1,6 @@
+react-resume:
+  build: .
+  environment:
+      NODE_ENV: development
+  ports:
+    - '4000:80'
